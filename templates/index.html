@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+	margin:0;
+	padding:0;
+	background-color: #ffebe9;
+ }
+input[type=file]::-webkit-file-upload-button 
+{
+	border:2px solid #800000;
+	padding: .2em .4em;
+	border-radius: .2em;
+	background-color: #800000;
+	color:white;
+	transition: 1s;
+	font-size:20px;
+}
+input[type=file]::file-selector-button 
+{
+	border: 2px solid #800000;
+	padding: .2em .4em;
+	border-radius: .2em;
+	background-color: #800000;
+	transition: 2s;
+}
+input[type=submit] 
+{
+	border: 2px solid #800000;
+	padding: .2em .4em;
+	border-radius: .2em;
+	background-color: #800000;
+	color:white;
+	font-size:20px;
+ }
+input[type=file]::-webkit-file-upload-button:hover 
+{
+	background-color: #800000;
+	border: 2px solid #800000;
+}
+input[type=file]::file-selector-button:hover 
+{
+	background-color: #800000;
+	border: 2px solid #800000;
+}
+#div1{
+	position:relative;
+	width:100%;
+	height:30vh;
+	background:#ffebe9;
+	color:white;
+ }
+h1,form{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #000000;
+ }
+h2,form{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #000000;
+ }
+#div2{
+	position:relative;
+	width:100%;
+	height:30vh;
+	background:#ffebe9;
+ }
+#div3{
+	width:100%;
+	height:30vh;
+	background:white;
+ }
+#div4{
+	width:100%;
+	height:10vh;
+	background:black;
+	color:white;
+ }
+#p{
+	color: #ffebe9;
+ }
+ </style>
+ </head>
+
+ <body>
+ 	<div id="div1" >
+	 	<center><h2> PRESENTED BY:Kolla Venkatesh</h2></center><br>
+ 	</div><br>
+	 <center><h2>Choose the file by clicking on button below:</h2></center><br><br>
+ 	<div id="div2">
+ 		<center>
+ 		<form action = "" method = "POST" enctype = "multipart/form-data">
+			<p><b><input type = "file" name = "file" accept=".csv" class ="inp" id ="inp" required/></p></b>
+ 			<br><br>
+			<p><b>Min Support:</p></b>
+ 			<input type="number" name="text" step="any" min="2" required>
+			<br><br><br><br>
+ 			<input type = "submit"/>
+ 		</form>
+ 		</center>
+ 	</div>
+ 	<div id='div3'><center>
+ 		<h3>{{output}}</h3></br>{{tot}}</center>
+ 	</div>
+ 	<footer id='div4'></footer>
+ </body>
+</html>
